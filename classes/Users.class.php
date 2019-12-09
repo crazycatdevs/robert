@@ -170,7 +170,7 @@ class Users implements Iterator
     // Verifie si la syntaxte d'un email est valide
     public function checkEmail($addresse)
     {
-        if (count($addresse) == 0) {
+        if (strlen($addresse) == 0) {
             return false;
         }
         $validMail = filter_var($addresse, FILTER_VALIDATE_EMAIL);
